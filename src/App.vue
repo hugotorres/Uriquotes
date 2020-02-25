@@ -45,11 +45,8 @@ export default {
       "https://raw.githubusercontent.com/hugotorres/bigbadidea/master/quotes.json"
     )
       .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        this.showerThoughts = data;
-        this.showerThoughts.shift();
-        this.showerThoughts.shift();
+      .then(data => { 
+        this.showerThoughts = data; 
         this.isLoaded = true;
       });
   },
@@ -58,7 +55,7 @@ export default {
       isLoaded: false,
       showerThoughts: [],
       options: {
-        scrollBar: true,
+        scrollBar: false,
         sectionsColor: [
           "#41b883",
           "#ff5f45",
